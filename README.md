@@ -54,3 +54,15 @@ Elle propose une gestion complète des utilisateurs, commandes, paiements, véhi
 
 ## 🗂️ Structure du Projet
 
+speedygo/
+├── frontend/ # Application Angular
+├── user-service/ # Spring Boot + H2
+├── livraison-service/ # Spring Boot + H2
+├── covoiturage-service/ # Spring Boot + H2
+├── vehicule-service/ # Spring Boot + MySQL
+├── paiement-service/ # Spring Boot + MySQL
+├── commande-service/ # Spring Boot + MySQL
+├── reclamation-service/ # Spring Boot + MySQL
+├── produit-service/ # .NET Core + MongoDB
+├── keycloak/ # Configurations Keycloak
+└── docker-compose.yml # Orchestration des services
