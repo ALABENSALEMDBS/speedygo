@@ -8,8 +8,8 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 @SpringBootApplication
 public class CovoiturageApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(CovoiturageApplication.class, args);
-    }
+	public static void main(String[] args) {
+		SpringApplication.run(CovoiturageApplication.class, args);
+	}
 
 }
