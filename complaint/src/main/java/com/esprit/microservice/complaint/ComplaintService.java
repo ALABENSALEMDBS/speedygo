@@ -55,5 +55,6 @@ public class ComplaintService {
                 .orElseThrow(() -> new RuntimeException("Complaint not found with id " + id));
         complaintRepository.delete(complaint);
     }
+    //
 }
 
