@@ -1,4 +1,4 @@
-# 🚚 SpeedyGo – Plateforme de Livraison et Covoiturage
+# 🚚 SpeedyGo (DevCore 5SE4) – Plateforme de Livraison et Covoiturage
 
 **SpeedyGo** est une application moderne de **livraison et covoiturage** conçue avec une **architecture microservices**.  
 Elle propose une gestion complète des utilisateurs, commandes, paiements, véhicules, produits, livraisons, réclamations et covoiturage, avec un **frontend Angular** et un système d’authentification basé sur **Keycloak**.  
