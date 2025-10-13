@@ -45,7 +45,7 @@ Elle propose une gestion complète des utilisateurs, commandes, paiements, véhi
 | Gestion Covoiturage    | Spring Boot  | H2             |
 | Gestion Véhicules      | Spring Boot  | MySQL          |
 | Gestion Paiements      | Spring Boot  | MySQL          |
-| Gestion Commandes      | Spring Boot  | MySQL          |
+| Gestion Congé      | Spring Boot  | MySQL          |
 | Gestion Réclamations   | Spring Boot  | MySQL          |
 | Gestion Produits       | .NET Core    | MongoDB        |
 | Authentification       | Keycloak     | PostgreSQL     |
