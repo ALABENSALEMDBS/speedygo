@@ -17,7 +17,7 @@ Elle propose une gestion complète des utilisateurs, commandes, paiements, véhi
   - `covoiturage-service` → gestion du covoiturage (**H2**)  
   - `vehicule-service` → gestion des véhicules (**MySQL**)  
   - `paiement-service` → gestion des paiements (**MySQL**)  
-  - `commande-service` → gestion des commandes (**MySQL**)  
+  - `leave-service` → gestion des congés (**MySQL**)  
   - `reclamation-service` → gestion des réclamations (**MySQL**)  
 
 - **.NET Core (C#)**  
