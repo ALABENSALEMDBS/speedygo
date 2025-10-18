@@ -1,4 +1,4 @@
-package com.esprit.microservice.complaint;
+package org.example.conge;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,10 +6,10 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-public class ComplaintApplication {
+public class CongeApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(ComplaintApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(CongeApplication.class, args);
+    }
 
 }

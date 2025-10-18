@@ -1,4 +1,4 @@
-# 🚚 SpeedyGo – Plateforme de Livraison et Covoiturage
+# 🚚 SpeedyGo (DevCore 5SE4) – Plateforme de Livraison et Covoiturage
 
 **SpeedyGo** est une application moderne de **livraison et covoiturage** conçue avec une **architecture microservices**.  
 Elle propose une gestion complète des utilisateurs, commandes, paiements, véhicules, produits, livraisons, réclamations et covoiturage, avec un **frontend Angular** et un système d’authentification basé sur **Keycloak**.  
@@ -17,7 +17,7 @@ Elle propose une gestion complète des utilisateurs, commandes, paiements, véhi
   - `covoiturage-service` → gestion du covoiturage (**H2**)  
   - `vehicule-service` → gestion des véhicules (**MySQL**)  
   - `paiement-service` → gestion des paiements (**MySQL**)  
-  - `commande-service` → gestion des commandes (**MySQL**)  
+  - `leave-service` → gestion des congés (**MySQL**)  
   - `reclamation-service` → gestion des réclamations (**MySQL**)  
 
 - **.NET Core (C#)**  
@@ -45,7 +45,7 @@ Elle propose une gestion complète des utilisateurs, commandes, paiements, véhi
 | Gestion Covoiturage    | Spring Boot  | H2             |
 | Gestion Véhicules      | Spring Boot  | MySQL          |
 | Gestion Paiements      | Spring Boot  | MySQL          |
-| Gestion Commandes      | Spring Boot  | MySQL          |
+| Gestion Congé      | Spring Boot  | MySQL          |
 | Gestion Réclamations   | Spring Boot  | MySQL          |
 | Gestion Produits       | .NET Core    | MongoDB        |
 | Authentification       | Keycloak     | PostgreSQL     |
