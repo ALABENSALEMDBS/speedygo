@@ -51,3 +51,14 @@ C:\Users\alabe\ServiceProduit\obj\Debug\net9.0\refint\ServiceProduit.dll
 C:\Users\alabe\ServiceProduit\obj\Debug\net9.0\ServiceProduit.pdb
 C:\Users\alabe\ServiceProduit\obj\Debug\net9.0\ServiceProduit.genruntimeconfig.cache
 C:\Users\alabe\ServiceProduit\obj\Debug\net9.0\ref\ServiceProduit.dll
+C:\Users\alabe\OneDrive\Bureau\3B ESPRIT\5 SE4\Applications-web-distribuees\speedygo\ServiceProduit\obj\Debug\net9.0\ServiceProduit.csproj.AssemblyReference.cache
+C:\Users\alabe\OneDrive\Bureau\3B ESPRIT\5 SE4\Applications-web-distribuees\speedygo\ServiceProduit\obj\Debug\net9.0\ServiceProduit.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alabe\OneDrive\Bureau\3B ESPRIT\5 SE4\Applications-web-distribuees\speedygo\ServiceProduit\obj\Debug\net9.0\ServiceProduit.AssemblyInfoInputs.cache
+C:\Users\alabe\OneDrive\Bureau\3B ESPRIT\5 SE4\Applications-web-distribuees\speedygo\ServiceProduit\obj\Debug\net9.0\ServiceProduit.AssemblyInfo.cs
+C:\Users\alabe\OneDrive\Bureau\3B ESPRIT\5 SE4\Applications-web-distribuees\speedygo\ServiceProduit\obj\Debug\net9.0\ServiceProduit.csproj.CoreCompileInputs.cache
+C:\Users\alabe\OneDrive\Bureau\3B ESPRIT\5 SE4\Applications-web-distribuees\speedygo\ServiceProduit\obj\Debug\net9.0\ServiceProduit.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\alabe\OneDrive\Bureau\3B ESPRIT\5 SE4\Applications-web-distribuees\speedygo\ServiceProduit\obj\Debug\net9.0\ServiceProduit.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\alabe\OneDrive\Bureau\3B ESPRIT\5 SE4\Applications-web-distribuees\speedygo\ServiceProduit\obj\Debug\net9.0\ServiceProduit.sourcelink.json
+C:\Users\alabe\OneDrive\Bureau\3B ESPRIT\5 SE4\Applications-web-distribuees\speedygo\ServiceProduit\obj\Debug\net9.0\ServiceProduit.dll
+C:\Users\alabe\OneDrive\Bureau\3B ESPRIT\5 SE4\Applications-web-distribuees\speedygo\ServiceProduit\obj\Debug\net9.0\refint\ServiceProduit.dll
+C:\Users\alabe\OneDrive\Bureau\3B ESPRIT\5 SE4\Applications-web-distribuees\speedygo\ServiceProduit\obj\Debug\net9.0\ServiceProduit.pdb

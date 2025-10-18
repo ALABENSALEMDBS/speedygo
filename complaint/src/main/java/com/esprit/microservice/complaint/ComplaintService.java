@@ -12,6 +12,23 @@ public class ComplaintService {
 
     @Autowired
     private ComplaintRepository complaintRepository;
+    @Autowired
+    private UserClient userClient;
+
+
+
+    public Complaint createComplaintUSER(Complaint complaint) {
+        UserDTO user = userClient.getUserById(complaint.getUserId());
+        if (user == null) {
+            throw new RuntimeException("Utilisateur non trouvé avec l'id " + complaint.getUserId());
+        }
+        complaint.setUserId(user.getId());
+        return complaintRepository.save(complaint);
+    }
+
+
+
+
 
     // CREATE
     public Complaint createComplaint(Complaint complaint) {
