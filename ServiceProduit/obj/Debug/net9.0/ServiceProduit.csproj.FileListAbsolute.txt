@@ -62,3 +62,6 @@ C:\Users\alabe\OneDrive\Bureau\3B ESPRIT\5 SE4\Applications-web-distribuees\spee
 C:\Users\alabe\OneDrive\Bureau\3B ESPRIT\5 SE4\Applications-web-distribuees\speedygo\ServiceProduit\obj\Debug\net9.0\ServiceProduit.dll
 C:\Users\alabe\OneDrive\Bureau\3B ESPRIT\5 SE4\Applications-web-distribuees\speedygo\ServiceProduit\obj\Debug\net9.0\refint\ServiceProduit.dll
 C:\Users\alabe\OneDrive\Bureau\3B ESPRIT\5 SE4\Applications-web-distribuees\speedygo\ServiceProduit\obj\Debug\net9.0\ServiceProduit.pdb
+D:\projet-web-dist\speedygo\ServiceProduit\obj\Debug\net9.0\ServiceProduit.dll
+D:\projet-web-dist\speedygo\ServiceProduit\obj\Debug\net9.0\refint\ServiceProduit.dll
+D:\projet-web-dist\speedygo\ServiceProduit\obj\Debug\net9.0\ServiceProduit.pdb
