@@ -20,5 +20,8 @@ namespace ServiceProduit.Models
 
         //[BsonElement("quantite")]
         public int Quantite { get; set; }
+
+      
+
     }
 }

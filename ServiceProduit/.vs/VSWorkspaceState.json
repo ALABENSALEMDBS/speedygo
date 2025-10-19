@@ -2,9 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\Controllers",
+    "\\Models",
     "\\Repositories",
     "\\Services"
   ],
-  "SelectedNode": "\\appsettings.json",
+  "SelectedNode": "\\Repositories\\ProduitRepository.cs",
   "PreviewInSolutionExplorer": false
 }

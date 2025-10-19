@@ -44,7 +44,7 @@ using Microsoft.OpenApi.Models;
 
 using MongoDB.Driver;
 using Steeltoe.Discovery.Eureka;
-using Steeltoe.Discovery.ClientBase;
+//using Steeltoe.Discovery.ClientBase;
 using ServiceProduit.Repositories;
 using ServiceProduit.Services;
 
