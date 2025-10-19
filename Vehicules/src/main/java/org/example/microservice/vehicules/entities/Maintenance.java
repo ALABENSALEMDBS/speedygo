@@ -17,6 +17,7 @@ public class Maintenance {
     private String id;
 
     // Relationship with Vehicle
+    //test
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "vehicle_id")
     @ToString.Exclude
