@@ -40,28 +40,26 @@
 //    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
 //}
 
-using Microsoft.OpenApi.Models;
 
+using Microsoft.OpenApi.Models;
 using MongoDB.Driver;
-using Steeltoe.Discovery.Eureka;
-//using Steeltoe.Discovery.ClientBase;
+using Steeltoe.Discovery.Client;
 using ServiceProduit.Repositories;
 using ServiceProduit.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// ------------------ SERVICES ------------------
+
 // Eureka Client
-builder.Services.AddServiceDiscovery(options =>
-{
-    options.UseEureka();
-});
+builder.Services.AddDiscoveryClient(builder.Configuration);
+
 // MongoDB Config
 builder.Services.AddSingleton<IMongoClient>(sp =>
 {
     var connectionString = builder.Configuration["MongoDB:ConnectionString"];
     return new MongoClient(connectionString);
 });
-
 builder.Services.AddSingleton(sp =>
 {
     var client = sp.GetRequiredService<IMongoClient>();
@@ -69,12 +67,29 @@ builder.Services.AddSingleton(sp =>
     return client.GetDatabase(dbName);
 });
 
+// Dépendances
+builder.Services.AddScoped<IProduitRepository, ProduitRepository>();
+builder.Services.AddScoped<IProduitService, ProduitService>();
 
+// Controllers, Swagger et CORS
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "ServiceProduit API", Version = "v1" });
 });
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(policy =>
+    {
+        policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+    });
+});
 
+// ------------------ BUILD APP ------------------
+var app = builder.Build();
+
+// ------------------ MIDDLEWARES ------------------
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -84,19 +99,12 @@ if (app.Environment.IsDevelopment())
     });
 }
 
+app.UseHttpsRedirection();
+app.UseCors();
 
-// Dépendances
-builder.Services.AddScoped<IProduitRepository, ProduitRepository>();
-builder.Services.AddScoped<IProduitService, ProduitService>();
-
-builder.Services.AddControllers();
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
-var app = builder.Build();
-app.UseSwagger();
-app.UseSwaggerUI();
 app.MapControllers();
 
-app.Run();
+// Steeltoe Discovery (Eureka)
+app.UseDiscoveryClient();
 
+app.Run();

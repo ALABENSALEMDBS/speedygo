@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DjnXwBEri6o=",
+  "dgSpecHash": "gxXtq4+LU9I=",
   "success": true,
-  "projectFilePath": "C:\\Users\\alabe\\ServiceProduit\\ServiceProduit.csproj",
+  "projectFilePath": "C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\ServiceProduit.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\alabe\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\alabe\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.1\\microsoft.aspnetcore.openapi.9.0.1.nupkg.sha512",

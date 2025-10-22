@@ -5,8 +5,8 @@ namespace ServiceProduit.Models
 {
     public class Produit
     {
-        //[BsonId]
-        //[BsonRepresentation(BsonType.ObjectId)]
+       // [BsonId]
+       // [BsonRepresentation(BsonType.ObjectId)]
         public string? Id { get; set; }
 
        // [BsonElement("nom")]
@@ -14,6 +14,9 @@ namespace ServiceProduit.Models
 
         //[BsonElement("description")]
         public string Description { get; set; } = string.Empty;
+
+        public string aaaa { get; set; } = string.Empty;
+
 
         //[BsonElement("prix")]
         public decimal Prix { get; set; }

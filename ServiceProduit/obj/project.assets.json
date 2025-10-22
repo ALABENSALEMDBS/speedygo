@@ -2812,11 +2812,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alabe\\ServiceProduit\\ServiceProduit.csproj",
+      "projectUniqueName": "C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\ServiceProduit.csproj",
       "projectName": "ServiceProduit",
-      "projectPath": "C:\\Users\\alabe\\ServiceProduit\\ServiceProduit.csproj",
+      "projectPath": "C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\ServiceProduit.csproj",
       "packagesPath": "C:\\Users\\alabe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alabe\\ServiceProduit\\obj\\",
+      "outputPath": "C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
