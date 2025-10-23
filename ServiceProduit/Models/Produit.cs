@@ -13,7 +13,6 @@ namespace ServiceProduit.Models
         public string Description { get; set; } = string.Empty;
         public string aaaa { get; set; } = string.Empty;
         public string llll { get; set; } = string.Empty;
-        public string dddd { get; set; } = string.Empty;
         public decimal Prix { get; set; }
         public int Quantite { get; set; }
     }
