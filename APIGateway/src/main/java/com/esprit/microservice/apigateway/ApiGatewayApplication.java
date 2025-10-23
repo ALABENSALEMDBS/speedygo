@@ -20,18 +20,26 @@ public class ApiGatewayApplication {
         return builder.routes()
                 .route("Covoiturage",r->r.path("/api/carpooling/**")
                         .uri("lb://Covoiturage") )
+
                 .route("Vehicules", r->r.path("/Vehicules/api/vehicle/**")
                         .uri("lb://Vehicules") )
+
                 .route("complaint", r->r.path("/complaint/api/complaints/**")
                         .uri("lb://complaint") )
+
                 .route("fastpost-delivery", r->r.path("/api/fastpost/**")
                         .uri("lb://fastpost-delivery") )
+
                 .route("ServiceProduit", r->r.path("/api/Produit/**")
                         .uri("lb://ServiceProduit") )
+
                 .route("conge", r->r.path("/conge/leaveSettings/**")
                         .uri("lb://conge") )
+
                 .route("paiment", r->r.path("/paiment/ads/**")
                         .uri("lb://paiment") )
+                .route("user", r->r.path("/api/users/**")
+                        .uri("lb://user") )
 
                 .build();
     }

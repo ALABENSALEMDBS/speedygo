@@ -70,8 +70,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADkAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-18T21:46:15.047Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -83,8 +82,7 @@
               "RelativeToolTip": "ServiceProduit.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-10-22T09:45:43.042Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-22T09:45:43.042Z"
             },
             {
               "$type": "Document",
@@ -96,8 +94,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAGEAAAAAAAAAAAAAAGsAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-18T21:28:56.337Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-18T21:28:56.337Z"
             },
             {
               "$type": "Document",
@@ -107,7 +104,7 @@
               "RelativeDocumentMoniker": "Models\\Produit.cs",
               "ToolTip": "C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\Models\\Produit.cs",
               "RelativeToolTip": "Models\\Produit.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-18T21:33:22.188Z",
               "EditorCaption": ""
@@ -134,8 +131,7 @@
               "RelativeToolTip": "Services\\ProduitService.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAAABkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-18T21:45:43.701Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-18T21:45:43.701Z"
             },
             {
               "$type": "Document",
@@ -171,8 +167,7 @@
               "RelativeToolTip": "Properties\\launchSettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-22T22:48:33.94Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-22T22:48:33.94Z"
             },
             {
               "$type": "Document",
