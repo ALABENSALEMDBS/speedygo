@@ -3,12 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\appsettings.Development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:appsettings.Development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\Models\\Produit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\Produit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\Services\\ProduitService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Services\\ProduitService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\ServiceProduit.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ServiceProduit.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\Properties\\launchSettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Properties\\launchSettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\appsettings.Development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:appsettings.Development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\Services\\IProduitService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,24 +43,8 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Repositories\\IProduitRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\Models\\Produit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\Produit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\Controllers\\ProduitController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Controllers\\ProduitController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\ServiceProduit.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ServiceProduit.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\wajdi\\AppData\\Local\\Temp\\.vsdbgsrc\\9303b0f60d3f24f32d63e70761f83eb9c4193fcffea53416623345f567a8ed9b\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -53,11 +57,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "ProduitController.cs",
               "DocumentMoniker": "C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\Controllers\\ProduitController.cs",
               "RelativeDocumentMoniker": "Controllers\\ProduitController.cs",
@@ -71,59 +75,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "appsettings.Development.json",
-              "ToolTip": "C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\appsettings.Development.json",
-              "RelativeToolTip": "appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-22T09:50:09.104Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "ServiceProduit.csproj",
               "DocumentMoniker": "C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\ServiceProduit.csproj",
               "RelativeDocumentMoniker": "ServiceProduit.csproj",
               "ToolTip": "C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\ServiceProduit.csproj",
               "RelativeToolTip": "ServiceProduit.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2025-10-22T09:45:43.042Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ProduitRepository.cs",
-              "DocumentMoniker": "C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\Repositories\\ProduitRepository.cs",
-              "RelativeDocumentMoniker": "Repositories\\ProduitRepository.cs",
-              "ToolTip": "C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\Repositories\\ProduitRepository.cs",
-              "RelativeToolTip": "Repositories\\ProduitRepository.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAABUAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-18T21:38:09.143Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAQwGkAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAAAGsAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-18T21:28:56.337Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "Produit.cs",
+              "DocumentMoniker": "C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\Models\\Produit.cs",
+              "RelativeDocumentMoniker": "Models\\Produit.cs",
+              "ToolTip": "C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\Models\\Produit.cs",
+              "RelativeToolTip": "Models\\Produit.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T21:33:22.188Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "IProduitService.cs",
               "DocumentMoniker": "C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\Services\\IProduitService.cs",
               "RelativeDocumentMoniker": "Services\\IProduitService.cs",
@@ -131,38 +122,73 @@
               "RelativeToolTip": "Services\\IProduitService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-18T21:40:57.477Z",
+              "WhenOpened": "2025-10-18T21:40:57.477Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProduitService.cs",
+              "DocumentMoniker": "C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\Services\\ProduitService.cs",
+              "RelativeDocumentMoniker": "Services\\ProduitService.cs",
+              "ToolTip": "C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\Services\\ProduitService.cs",
+              "RelativeToolTip": "Services\\ProduitService.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAABkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T21:45:43.701Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 3,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
               "ToolTip": "C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABIAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-18T21:23:04.268Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-18T21:23:04.268Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-22T09:50:09.104Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Produit.cs",
-              "DocumentMoniker": "C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\Models\\Produit.cs",
-              "RelativeDocumentMoniker": "Models\\Produit.cs",
-              "ToolTip": "C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\Models\\Produit.cs",
-              "RelativeToolTip": "Models\\Produit.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-18T21:33:22.188Z",
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-22T22:48:33.94Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 8,
+              "Title": "ProduitRepository.cs",
+              "DocumentMoniker": "C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\Repositories\\ProduitRepository.cs",
+              "RelativeDocumentMoniker": "Repositories\\ProduitRepository.cs",
+              "ToolTip": "C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\Repositories\\ProduitRepository.cs",
+              "RelativeToolTip": "Repositories\\ProduitRepository.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAABUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T21:38:09.143Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\wajdi\\AppData\\Local\\Temp\\.vsdbgsrc\\9303b0f60d3f24f32d63e70761f83eb9c4193fcffea53416623345f567a8ed9b\\Program.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\..\\..\\wajdi\\AppData\\Local\\Temp\\.vsdbgsrc\\9303b0f60d3f24f32d63e70761f83eb9c4193fcffea53416623345f567a8ed9b\\Program.cs",
@@ -175,20 +201,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProduitService.cs",
-              "DocumentMoniker": "C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\Services\\ProduitService.cs",
-              "RelativeDocumentMoniker": "Services\\ProduitService.cs",
-              "ToolTip": "C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\Services\\ProduitService.cs",
-              "RelativeToolTip": "Services\\ProduitService.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAAAB4AAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-18T21:45:43.701Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "IProduitRepository.cs",
               "DocumentMoniker": "C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\Repositories\\IProduitRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\IProduitRepository.cs",
@@ -196,8 +209,7 @@
               "RelativeToolTip": "Repositories\\IProduitRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-18T21:36:48.356Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-18T21:36:48.356Z"
             }
           ]
         }
