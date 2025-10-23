@@ -3,9 +3,10 @@
     "",
     "\\Controllers",
     "\\Models",
+    "\\Properties",
     "\\Repositories",
     "\\Services"
   ],
-  "SelectedNode": "\\Repositories\\ProduitRepository.cs",
+  "SelectedNode": "\\Models\\Produit.cs",
   "PreviewInSolutionExplorer": false
 }

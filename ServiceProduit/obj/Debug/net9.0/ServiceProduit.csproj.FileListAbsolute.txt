@@ -73,11 +73,15 @@ C:\Users\alabe\OneDrive\Bureau\3B ESPRIT\5 SE4\Applications-web-distribuees\spee
 C:\Users\alabe\OneDrive\Bureau\3B ESPRIT\5 SE4\Applications-web-distribuees\speedygo projet\speedygo\ServiceProduit\bin\Debug\net9.0\ServiceProduit.runtimeconfig.json
 C:\Users\alabe\OneDrive\Bureau\3B ESPRIT\5 SE4\Applications-web-distribuees\speedygo projet\speedygo\ServiceProduit\bin\Debug\net9.0\ServiceProduit.dll
 C:\Users\alabe\OneDrive\Bureau\3B ESPRIT\5 SE4\Applications-web-distribuees\speedygo projet\speedygo\ServiceProduit\bin\Debug\net9.0\ServiceProduit.pdb
+C:\Users\alabe\OneDrive\Bureau\3B ESPRIT\5 SE4\Applications-web-distribuees\speedygo projet\speedygo\ServiceProduit\bin\Debug\net9.0\AWSSDK.Core.dll
+C:\Users\alabe\OneDrive\Bureau\3B ESPRIT\5 SE4\Applications-web-distribuees\speedygo projet\speedygo\ServiceProduit\bin\Debug\net9.0\AWSSDK.SecurityToken.dll
 C:\Users\alabe\OneDrive\Bureau\3B ESPRIT\5 SE4\Applications-web-distribuees\speedygo projet\speedygo\ServiceProduit\bin\Debug\net9.0\DnsClient.dll
 C:\Users\alabe\OneDrive\Bureau\3B ESPRIT\5 SE4\Applications-web-distribuees\speedygo projet\speedygo\ServiceProduit\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
 C:\Users\alabe\OneDrive\Bureau\3B ESPRIT\5 SE4\Applications-web-distribuees\speedygo projet\speedygo\ServiceProduit\bin\Debug\net9.0\Microsoft.OpenApi.dll
 C:\Users\alabe\OneDrive\Bureau\3B ESPRIT\5 SE4\Applications-web-distribuees\speedygo projet\speedygo\ServiceProduit\bin\Debug\net9.0\MongoDB.Bson.dll
 C:\Users\alabe\OneDrive\Bureau\3B ESPRIT\5 SE4\Applications-web-distribuees\speedygo projet\speedygo\ServiceProduit\bin\Debug\net9.0\MongoDB.Driver.dll
+C:\Users\alabe\OneDrive\Bureau\3B ESPRIT\5 SE4\Applications-web-distribuees\speedygo projet\speedygo\ServiceProduit\bin\Debug\net9.0\MongoDB.Driver.Core.dll
+C:\Users\alabe\OneDrive\Bureau\3B ESPRIT\5 SE4\Applications-web-distribuees\speedygo projet\speedygo\ServiceProduit\bin\Debug\net9.0\MongoDB.Libmongocrypt.dll
 C:\Users\alabe\OneDrive\Bureau\3B ESPRIT\5 SE4\Applications-web-distribuees\speedygo projet\speedygo\ServiceProduit\bin\Debug\net9.0\SharpCompress.dll
 C:\Users\alabe\OneDrive\Bureau\3B ESPRIT\5 SE4\Applications-web-distribuees\speedygo projet\speedygo\ServiceProduit\bin\Debug\net9.0\Snappier.dll
 C:\Users\alabe\OneDrive\Bureau\3B ESPRIT\5 SE4\Applications-web-distribuees\speedygo projet\speedygo\ServiceProduit\bin\Debug\net9.0\Steeltoe.Common.dll
@@ -95,6 +99,9 @@ C:\Users\alabe\OneDrive\Bureau\3B ESPRIT\5 SE4\Applications-web-distribuees\spee
 C:\Users\alabe\OneDrive\Bureau\3B ESPRIT\5 SE4\Applications-web-distribuees\speedygo projet\speedygo\ServiceProduit\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\alabe\OneDrive\Bureau\3B ESPRIT\5 SE4\Applications-web-distribuees\speedygo projet\speedygo\ServiceProduit\bin\Debug\net9.0\System.Reflection.MetadataLoadContext.dll
 C:\Users\alabe\OneDrive\Bureau\3B ESPRIT\5 SE4\Applications-web-distribuees\speedygo projet\speedygo\ServiceProduit\bin\Debug\net9.0\ZstdSharp.dll
+C:\Users\alabe\OneDrive\Bureau\3B ESPRIT\5 SE4\Applications-web-distribuees\speedygo projet\speedygo\ServiceProduit\bin\Debug\net9.0\runtimes\linux\native\libmongocrypt.so
+C:\Users\alabe\OneDrive\Bureau\3B ESPRIT\5 SE4\Applications-web-distribuees\speedygo projet\speedygo\ServiceProduit\bin\Debug\net9.0\runtimes\osx\native\libmongocrypt.dylib
+C:\Users\alabe\OneDrive\Bureau\3B ESPRIT\5 SE4\Applications-web-distribuees\speedygo projet\speedygo\ServiceProduit\bin\Debug\net9.0\runtimes\win\native\mongocrypt.dll
 C:\Users\alabe\OneDrive\Bureau\3B ESPRIT\5 SE4\Applications-web-distribuees\speedygo projet\speedygo\ServiceProduit\obj\Debug\net9.0\ServiceProduit.csproj.AssemblyReference.cache
 C:\Users\alabe\OneDrive\Bureau\3B ESPRIT\5 SE4\Applications-web-distribuees\speedygo projet\speedygo\ServiceProduit\obj\Debug\net9.0\ServiceProduit.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\alabe\OneDrive\Bureau\3B ESPRIT\5 SE4\Applications-web-distribuees\speedygo projet\speedygo\ServiceProduit\obj\Debug\net9.0\ServiceProduit.AssemblyInfoInputs.cache

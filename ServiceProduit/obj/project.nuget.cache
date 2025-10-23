@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "gxXtq4+LU9I=",
+  "dgSpecHash": "7em67Boeyo0=",
   "success": true,
   "projectFilePath": "C:\\Users\\alabe\\OneDrive\\Bureau\\3B ESPRIT\\5 SE4\\Applications-web-distribuees\\speedygo projet\\speedygo\\ServiceProduit\\ServiceProduit.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\alabe\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
+    "C:\\Users\\alabe\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",
     "C:\\Users\\alabe\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\alabe\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.1\\microsoft.aspnetcore.openapi.9.0.1.nupkg.sha512",
     "C:\\Users\\alabe\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
@@ -37,8 +39,10 @@
     "C:\\Users\\alabe\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\alabe\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512",
     "C:\\Users\\alabe\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
-    "C:\\Users\\alabe\\.nuget\\packages\\mongodb.bson\\3.5.0\\mongodb.bson.3.5.0.nupkg.sha512",
-    "C:\\Users\\alabe\\.nuget\\packages\\mongodb.driver\\3.5.0\\mongodb.driver.3.5.0.nupkg.sha512",
+    "C:\\Users\\alabe\\.nuget\\packages\\mongodb.bson\\2.28.0\\mongodb.bson.2.28.0.nupkg.sha512",
+    "C:\\Users\\alabe\\.nuget\\packages\\mongodb.driver\\2.28.0\\mongodb.driver.2.28.0.nupkg.sha512",
+    "C:\\Users\\alabe\\.nuget\\packages\\mongodb.driver.core\\2.28.0\\mongodb.driver.core.2.28.0.nupkg.sha512",
+    "C:\\Users\\alabe\\.nuget\\packages\\mongodb.libmongocrypt\\1.11.0\\mongodb.libmongocrypt.1.11.0.nupkg.sha512",
     "C:\\Users\\alabe\\.nuget\\packages\\sharpcompress\\0.30.1\\sharpcompress.0.30.1.nupkg.sha512",
     "C:\\Users\\alabe\\.nuget\\packages\\snappier\\1.0.0\\snappier.1.0.0.nupkg.sha512",
     "C:\\Users\\alabe\\.nuget\\packages\\steeltoe.common\\3.2.0\\steeltoe.common.3.2.0.nupkg.sha512",
@@ -51,10 +55,10 @@
     "C:\\Users\\alabe\\.nuget\\packages\\steeltoe.discovery.clientcore\\3.2.0\\steeltoe.discovery.clientcore.3.2.0.nupkg.sha512",
     "C:\\Users\\alabe\\.nuget\\packages\\steeltoe.discovery.eureka\\3.2.0\\steeltoe.discovery.eureka.3.2.0.nupkg.sha512",
     "C:\\Users\\alabe\\.nuget\\packages\\steeltoe.extensions.configuration.abstractions\\3.2.0\\steeltoe.extensions.configuration.abstractions.3.2.0.nupkg.sha512",
-    "C:\\Users\\alabe\\.nuget\\packages\\swashbuckle.aspnetcore\\6.6.1\\swashbuckle.aspnetcore.6.6.1.nupkg.sha512",
-    "C:\\Users\\alabe\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.6.1\\swashbuckle.aspnetcore.swagger.6.6.1.nupkg.sha512",
-    "C:\\Users\\alabe\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.6.1\\swashbuckle.aspnetcore.swaggergen.6.6.1.nupkg.sha512",
-    "C:\\Users\\alabe\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.6.1\\swashbuckle.aspnetcore.swaggerui.6.6.1.nupkg.sha512",
+    "C:\\Users\\alabe\\.nuget\\packages\\swashbuckle.aspnetcore\\6.6.2\\swashbuckle.aspnetcore.6.6.2.nupkg.sha512",
+    "C:\\Users\\alabe\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.6.2\\swashbuckle.aspnetcore.swagger.6.6.2.nupkg.sha512",
+    "C:\\Users\\alabe\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.6.2\\swashbuckle.aspnetcore.swaggergen.6.6.2.nupkg.sha512",
+    "C:\\Users\\alabe\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.6.2\\swashbuckle.aspnetcore.swaggerui.6.6.2.nupkg.sha512",
     "C:\\Users\\alabe\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\alabe\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
     "C:\\Users\\alabe\\.nuget\\packages\\system.diagnostics.eventlog\\6.0.0\\system.diagnostics.eventlog.6.0.0.nupkg.sha512",
@@ -73,28 +77,8 @@
       "code": "NU1603",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "ServiceProduit dépend de Steeltoe.Discovery.ClientCore (>= 3.1.6) mais Steeltoe.Discovery.ClientCore 3.1.6 est introuvable. Steeltoe.Discovery.ClientCore 3.2.0 a été résolu à la place.",
-      "libraryId": "Steeltoe.Discovery.ClientCore",
-      "targetGraphs": [
-        "net9.0"
-      ]
-    },
-    {
-      "code": "NU1603",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "ServiceProduit dépend de Steeltoe.Discovery.Eureka (>= 3.1.6) mais Steeltoe.Discovery.Eureka 3.1.6 est introuvable. Steeltoe.Discovery.Eureka 3.2.0 a été résolu à la place.",
-      "libraryId": "Steeltoe.Discovery.Eureka",
-      "targetGraphs": [
-        "net9.0"
-      ]
-    },
-    {
-      "code": "NU1603",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "ServiceProduit dépend de Swashbuckle.AspNetCore (>= 6.6.0) mais Swashbuckle.AspNetCore 6.6.0 est introuvable. Swashbuckle.AspNetCore 6.6.1 a été résolu à la place.",
-      "libraryId": "Swashbuckle.AspNetCore",
+      "message": "ServiceProduit dépend de MongoDB.Driver (>= 2.27.1) mais MongoDB.Driver 2.27.1 est introuvable. MongoDB.Driver 2.28.0 a été résolu à la place.",
+      "libraryId": "MongoDB.Driver",
       "targetGraphs": [
         "net9.0"
       ]
