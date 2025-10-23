@@ -41,7 +41,7 @@ public class Complaint {
 
 
     // User who created the complaint (for permission control)
-    private int userId;
+    private Long userId;
 
 
 

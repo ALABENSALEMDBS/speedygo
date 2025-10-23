@@ -55,6 +55,19 @@ public class ComplaintController {
             return ResponseEntity.status(404).body(e.getMessage());
         }
     }
-//
+
+
+// ===========> get USER from complaint microservice <============
+    @RequestMapping("/api/users/{id}")
+    public UserDTO getUserById(@PathVariable Long id) {
+        return complaintService.getUserById(id);
+    }
+
+    // ✅ Création d'une réclamation avec vérification de l'utilisateur
+    @PostMapping("/reclamationparuser")
+    public ResponseEntity<Complaint> createComplaintForUser(@RequestBody Complaint complaint) {
+        Complaint createdComplaint = complaintService.createComplaintUSER(complaint);
+        return ResponseEntity.ok(createdComplaint);
+    }
 }
 

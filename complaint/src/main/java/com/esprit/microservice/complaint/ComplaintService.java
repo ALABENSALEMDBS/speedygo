@@ -16,7 +16,11 @@ public class ComplaintService {
     private UserClient userClient;
 
 
-
+    // ===========> get USER from complaint microservice <============
+    public UserDTO getUserById(Long id) {
+        return userClient.getUserById(id);
+    }
+    //================================================================
     public Complaint createComplaintUSER(Complaint complaint) {
         UserDTO user = userClient.getUserById(complaint.getUserId());
         if (user == null) {
