@@ -22,5 +22,5 @@ spring.security.oauth2.resourceserver.jwt.jwk-set-uri=http://localhost:8060/real
 # Keycloak Configuration for Login
 keycloak.auth-server-url=http://localhost:8060
 keycloak.realm=SpeedyGo5se4
-keycloak.client-id=gateway
+keycloak.client-id=speedygo-services
 keycloak.client-secret=JtfcIfHZlTHJmv6dsINTsB7kc8M2mO8P

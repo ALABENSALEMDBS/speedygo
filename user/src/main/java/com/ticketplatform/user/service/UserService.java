@@ -42,7 +42,6 @@ public class UserService {
             existingUser.setEmail(userDetails.getEmail());
             existingUser.setFirstName(userDetails.getFirstName());
             existingUser.setLastName(userDetails.getLastName());
-            existingUser.setPassword(userDetails.getPassword());
             existingUser.setPhone(userDetails.getPhone());
             existingUser.setAddress(userDetails.getAddress());
             existingUser.setCity(userDetails.getCity());

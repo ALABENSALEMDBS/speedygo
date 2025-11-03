@@ -26,9 +26,6 @@ public class User {
     private String lastName;
 
     @Column(nullable = true)
-    private String password;
-
-    @Column(nullable = true)
     private String phone;
 
     @Column(nullable = true)
