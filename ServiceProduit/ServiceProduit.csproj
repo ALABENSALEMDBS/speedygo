@@ -1,0 +1,46 @@
+
+<!--
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.1" />
+    <PackageReference Include="MongoDB.Driver" Version="2.27.1" />
+    <PackageReference Include="Steeltoe.Discovery.ClientCore" Version="3.1.6" />
+    <PackageReference Include="Steeltoe.Discovery.Eureka" Version="3.1.6" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.0" />
+  </ItemGroup>
+
+</Project>
+  -->
+
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!-- ✅ .NET 9 officiel -->
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.1" />
+
+		<!-- ✅ Dernière version stable compatible .NET 9 -->
+		<PackageReference Include="MongoDB.Driver" Version="2.27.1" />
+
+		<!-- ⚠️ Steeltoe n’a pas encore de version officielle .NET 9,
+         mais 3.2.0 fonctionne en mode compatible -->
+		<PackageReference Include="Steeltoe.Discovery.ClientCore" Version="3.2.0" />
+		<PackageReference Include="Steeltoe.Discovery.Eureka" Version="3.2.0" />
+
+		<!-- ✅ Swagger à jour -->
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+	</ItemGroup>
+
+</Project>
