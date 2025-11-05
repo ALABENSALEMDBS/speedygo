@@ -13,6 +13,7 @@ import java.time.LocalDateTime;
 public class Carpooling {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
     private String id;
 
     private String driverId;

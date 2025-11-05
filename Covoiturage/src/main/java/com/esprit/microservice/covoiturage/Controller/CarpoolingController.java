@@ -2,6 +2,7 @@ package com.esprit.microservice.covoiturage.Controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import com.esprit.microservice.covoiturage.Repository.CarpoolingRepository;
@@ -65,6 +66,12 @@ public class CarpoolingController {
         return carpoolingService.getRidesByDriverId(driverId);
     }
 
+    @Value("${welcome.message}")
+    private String welcomeMessage;
+    @GetMapping("/welcome")
+    public String welcome() {
+        return welcomeMessage;
+    }
 
 
 }
