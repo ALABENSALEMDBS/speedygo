@@ -26,7 +26,7 @@ public class SecurityConfig {
                 .authorizeExchange(exchange -> exchange
                         .pathMatchers("/eureka/**").permitAll()
                         .pathMatchers("/api/users/register").permitAll()
-                        .pathMatchers("/api/auth/login").permitAll()
+                        .pathMatchers("/api/auth/**").permitAll()
                         .pathMatchers("/swagger-ui/**", "/v3/api-docs/**", "/swagger-ui.html", "/webjars/**").permitAll()
                         .pathMatchers("/api/users/**").hasAnyRole("admin")
                         .pathMatchers("/Vehicules/api/vehicle/**").hasAnyRole("admin", "driver")
