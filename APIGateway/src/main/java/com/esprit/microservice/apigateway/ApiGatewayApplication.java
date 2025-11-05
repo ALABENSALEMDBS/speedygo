@@ -40,6 +40,9 @@ public class ApiGatewayApplication {
                         .uri("lb://paiment") )
                 .route("user", r->r.path("/api/users/**")
                         .uri("lb://user") )
+                .route("user", r->r.path("/api/auth/**")
+                        .uri("lb://user") )
+
 
                 .build();
     }

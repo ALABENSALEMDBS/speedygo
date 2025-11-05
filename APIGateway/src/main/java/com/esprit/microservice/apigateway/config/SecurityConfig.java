@@ -22,12 +22,20 @@ public class SecurityConfig {
     public SecurityWebFilterChain securityWebFilterChain(ServerHttpSecurity http) {
         return http
                 .csrf(ServerHttpSecurity.CsrfSpec::disable)
+                .cors(cors -> cors.disable())
                 .authorizeExchange(exchange -> exchange
                         .pathMatchers("/eureka/**").permitAll()
+                        .pathMatchers("/api/users/register").permitAll()
+                        .pathMatchers("/api/auth/**").permitAll()
+                        .pathMatchers("/swagger-ui/**", "/v3/api-docs/**", "/swagger-ui.html", "/webjars/**").permitAll()
                         .pathMatchers("/api/users/**").hasAnyRole("admin")
-                        .pathMatchers("/api/vehicle/**").hasAnyRole("admin", "driver")
+                        .pathMatchers("/Vehicules/api/vehicle/**").hasAnyRole("admin", "driver")
+                        .pathMatchers("/conge/**").hasAnyRole("admin", "driver")
                         .pathMatchers("/api/fastpost/**").hasAnyRole("admin", "driver", "client")
-                        .pathMatchers("/complaint/api/complaints/**").hasAnyRole("admin", "driver", "client")
+                        .pathMatchers("/complaint/**").hasAnyRole("admin", "driver", "client")
+                        .pathMatchers("/api/carpooling/**").hasAnyRole("admin", "driver", "client")
+                        .pathMatchers("/paiment/**").hasAnyRole("admin", "driver", "client")
+                        .pathMatchers("/api/Produit/**").hasAnyRole("admin", "driver", "client")
                         .anyExchange().authenticated()
                 )
                 .oauth2ResourceServer(oauth2 -> oauth2

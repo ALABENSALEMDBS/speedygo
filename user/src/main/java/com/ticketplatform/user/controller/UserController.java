@@ -1,10 +1,15 @@
 package com.ticketplatform.user.controller;
 
+import com.ticketplatform.user.dto.RegisterRequest;
 import com.ticketplatform.user.entity.User;
 import com.ticketplatform.user.service.UserService;
+import com.ticketplatform.user.service.KeycloakUserService;
+import com.ticketplatform.user.service.KeycloakAdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,6 +21,54 @@ public class UserController {
 
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private KeycloakUserService keycloakUserService;
+
+    @Autowired
+    private KeycloakAdminService keycloakAdminService;
+
+    // Register new user with role selection
+    @PostMapping("/register")
+    public ResponseEntity<?> register(@RequestBody RegisterRequest request) {
+        try {
+            // Create user in Keycloak with selected role
+            String keycloakUserId = keycloakAdminService.createUserWithRole(
+                    request.getEmail(),
+                    request.getPassword(),
+                    request.getFirstName(),
+                    request.getLastName(),
+                    request.getRole()
+            );
+
+            // Create user in local database
+            User user = new User();
+            user.setEmail(request.getEmail());
+            user.setFirstName(request.getFirstName());
+            user.setLastName(request.getLastName());
+            user.setActive(true);
+            userService.createUser(user);
+
+            return ResponseEntity.status(HttpStatus.CREATED)
+                    .body("User registered successfully with role: " + request.getRole());
+        } catch (Exception e) {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+                    .body("Registration failed: " + e.getMessage());
+        }
+    }
+
+    // Get or create current user from JWT
+    @GetMapping("/me")
+    public ResponseEntity<User> getCurrentUser(@AuthenticationPrincipal Jwt jwt) {
+        String userId = jwt.getSubject();
+        String firstName = jwt.getClaimAsString("given_name");
+        String lastName = jwt.getClaimAsString("family_name");
+        String email = jwt.getClaimAsString("email");
+        String username = jwt.getClaimAsString("preferred_username");
+
+        User user = keycloakUserService.getOrCreateUser(userId, firstName, lastName, email, username);
+        return new ResponseEntity<>(user, HttpStatus.OK);
+    }
 
     // Create a new user
     @PostMapping

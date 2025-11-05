@@ -1,11 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ServiceProduit.Models;
 using ServiceProduit.Services;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ServiceProduit.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class ProduitController : ControllerBase
     {
         private readonly IProduitService _produitService;

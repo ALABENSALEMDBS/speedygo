@@ -46,6 +46,7 @@ using MongoDB.Driver;
 using Steeltoe.Discovery.Client;
 using ServiceProduit.Repositories;
 using ServiceProduit.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -53,6 +54,20 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Eureka Client
 builder.Services.AddDiscoveryClient(builder.Configuration);
+
+// Keycloak JWT Authentication
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.Authority = "http://localhost:8060/realms/SpeedyGo5se4";
+        options.RequireHttpsMetadata = false;
+        options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+        {
+            ValidateAudience = false,
+            ValidateIssuer = true,
+            ValidIssuer = "http://localhost:8060/realms/SpeedyGo5se4"
+        };
+    });
 
 // MongoDB Config
 builder.Services.AddSingleton<IMongoClient>(sp =>
@@ -67,7 +82,7 @@ builder.Services.AddSingleton(sp =>
     return client.GetDatabase(dbName);
 });
 
-// Dépendances
+// Dï¿½pendances
 builder.Services.AddScoped<IProduitRepository, ProduitRepository>();
 builder.Services.AddScoped<IProduitService, ProduitService>();
 
@@ -101,6 +116,9 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseCors();
+
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.MapControllers();
 
