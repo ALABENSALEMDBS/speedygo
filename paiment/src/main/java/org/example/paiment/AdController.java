@@ -3,6 +3,7 @@ package org.example.paiment;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
@@ -44,4 +45,19 @@ public class AdController {
     public void deleteAd(@PathVariable Long id) {
         adService.deleteAd(id);
     }
+
+
+    // ===========> get USER from complaint microservice <============
+    @RequestMapping("/api/users/{id}")
+    public UserDTO getUserById(@PathVariable Long id) {
+        return adService.getUserById(id);
+    }
+
+
+    @PostMapping("/publiciteparuser")
+    public ResponseEntity<Ad> createAdForUser(@RequestBody Ad ad) {
+        Ad createAd = adService.createAdUSER(ad);
+        return ResponseEntity.ok(createAd);
+    }
+
 }
