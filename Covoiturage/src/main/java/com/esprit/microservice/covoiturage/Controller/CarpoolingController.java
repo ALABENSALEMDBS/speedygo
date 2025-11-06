@@ -73,6 +73,5 @@ public class CarpoolingController {
         return welcomeMessage;
     }
 
-
 }
 
