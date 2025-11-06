@@ -17,5 +17,6 @@ public class AuthController {
     public LoginResponse login(@RequestBody LoginRequest loginRequest) {
         return keycloakAuthService.login(loginRequest.getEmail(), loginRequest.getPassword());
     }
+
 }
 
