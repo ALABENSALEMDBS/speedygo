@@ -31,4 +31,5 @@ public class Carpooling {
     private int rentalDurationHours;
     private double totalRentalPrice;
     private String occasion;
+    private Long userId;
 }

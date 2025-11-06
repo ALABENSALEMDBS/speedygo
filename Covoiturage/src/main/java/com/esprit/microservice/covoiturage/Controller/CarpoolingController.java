@@ -1,6 +1,7 @@
 package com.esprit.microservice.covoiturage.Controller;
 
 
+import com.esprit.microservice.covoiturage.entities.UserDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
@@ -25,16 +26,26 @@ public class CarpoolingController {
         return carpoolingService.getAllRides();
     }
 
+//    @RequestMapping("/api/users/{id}")
+//    public UserDTO getUserById(@PathVariable Long id) {
+//        return carpoolingService.getUserById(id);
+//    }
+
+
     @GetMapping("/{id}")
     public ResponseEntity<Carpooling> getRideById(@PathVariable String id) {
         Optional<Carpooling> ride = carpoolingService.getRideById(id);
         return ride.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    @PostMapping("/createRide")
-    public Carpooling createRide(@RequestBody Carpooling carpooling) {
-        return carpoolingService.createRide(carpooling);
-    }
+//    @PostMapping("/createRide")
+//    public Carpooling createRide(@RequestBody Carpooling carpooling) {
+//        return carpoolingService.createRide(carpooling);
+//    }
+@PostMapping("/create")
+public ResponseEntity<Carpooling> createCarpooling(@RequestBody Carpooling carpooling) {
+    return ResponseEntity.ok(carpoolingService.createCarpooling(carpooling));
+}
 
     @PutMapping("/{id}")
     public ResponseEntity<Carpooling> updateRide(@PathVariable String id, @RequestBody Carpooling updatedCarpooling) {
