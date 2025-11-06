@@ -15,7 +15,8 @@ public class AdService implements IAd {
 
     @Autowired
     private AdRepo adRepo;
-
+    @Autowired
+    private UserClient userClient;
 
 
     @Override
@@ -56,6 +57,19 @@ public class AdService implements IAd {
     @Override
     public void deleteAd(Long id) { // ✅ Changé String à Long
         adRepo.deleteById(id);
+    }
+
+    // ===========> get USER from complaint microservice <============
+    public UserDTO getUserById(Long id) {
+        return userClient.getUserById(id);
+    }
+    public Ad createAdUSER(Ad ad) {
+        UserDTO user = userClient.getUserById(ad.getUserId());
+        if (user == null) {
+            throw new RuntimeException("Utilisateur non trouvé avec l'id " + ad.getUserId());
+        }
+        ad.setUserId(user.getId());
+        return adRepo.save(ad);
     }
 
 
