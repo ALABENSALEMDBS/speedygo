@@ -31,4 +31,5 @@ public class Ad {
     @Enumerated(EnumType.STRING)
     private AdCategory category;
 
+    private Long userId;
 }
