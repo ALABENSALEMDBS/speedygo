@@ -6,6 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 
 
 import java.util.List;
+import java.util.Optional;
 
 public interface VehicleRepository extends JpaRepository<Vehicle, String> {
     @Query("SELECT v FROM Vehicle v WHERE v.brand LIKE %:brand%")
@@ -17,5 +18,5 @@ public interface VehicleRepository extends JpaRepository<Vehicle, String> {
     // Alternative using custom query
 //    @Query("SELECT v FROM Vehicle v WHERE v.driver.id = :driverId")
 //    List<Vehicle> findByAssignedToDriverId(@Param("driverId") String driverId);
-
+    Optional<Vehicle> findByVin(String vin);
 }
