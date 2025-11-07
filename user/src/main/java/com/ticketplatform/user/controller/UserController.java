@@ -131,5 +131,12 @@ public class UserController {
                 : ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found");
     }
 
+    @PutMapping("/{id}/dailyDeliveries")
+    public ResponseEntity<?> updateDailyDeliveriesCount(@PathVariable Long id, @RequestParam("count") int count) {
+        return userService.updateDailyDeliveriesCount(id, count)
+                ? ResponseEntity.ok("Daily deliveries count updated")
+                : ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found");
+    }
+
 }
 

@@ -19,6 +19,11 @@ public class FastPost {
 
     private boolean assignedToDelivery = false;
 
+    // User tracking fields
+    private String userId; // ID of the user who created the FastPost
+    private String clientFirstName; // First name of the client
+    private String clientLastName; // Last name of the client
+
     // Constructeurs
     public FastPost() {}
 
@@ -87,5 +92,29 @@ public class FastPost {
 
     public void setAssignedToDelivery(boolean assignedToDelivery) {
         this.assignedToDelivery = assignedToDelivery;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public String getClientFirstName() {
+        return clientFirstName;
+    }
+
+    public void setClientFirstName(String clientFirstName) {
+        this.clientFirstName = clientFirstName;
+    }
+
+    public String getClientLastName() {
+        return clientLastName;
+    }
+
+    public void setClientLastName(String clientLastName) {
+        this.clientLastName = clientLastName;
     }
 }
