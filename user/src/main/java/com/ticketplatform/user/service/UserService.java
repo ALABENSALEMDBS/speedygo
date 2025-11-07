@@ -60,5 +60,16 @@ public class UserService {
         }
         return false;
     }
+    public boolean updateAssignedVehicle(Long id, String vehicleId) {
+        Optional<User> optionalUser = userRepository.findById(id);
+        if (optionalUser.isEmpty())
+            return false;
+
+        User user = optionalUser.get();
+        user.setAssignedVehicleId(vehicleId);
+        userRepository.save(user);
+        return true;
+    }
+
 }
 

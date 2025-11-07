@@ -13,13 +13,80 @@ import java.util.Optional;
 @AllArgsConstructor
 public class VehicleService implements IVehicleService{
     VehicleRepository vehicleRepository;
+    UserClient userClient;
 
+
+//    public Vehicle addVehicle(Vehicle vehicle) {
+//        if (vehicle.getVehicleStatusD() == null) {
+//            vehicle.setVehicleStatusD(Status.APPROVED);
+//        }
+//        return vehicleRepository.save(vehicle);}
+/*public Vehicle addVehicle(Vehicle vehicle) {
+    if (vehicle.getVehicleStatusD() == null) {
+        vehicle.setVehicleStatusD(Status.APPROVED);
+    }
+
+    // ✅ Obtenir liste des users depuis User Microservice
+    List<UserDTO> freeDrivers = userClient.getAllUsers().stream()
+            .filter(u -> u.getRoles() != null && u.getRoles().contains("driver"))
+            .filter(u -> u.getAssignedVehicleId() == null || u.getAssignedVehicleId().isEmpty())
+            .toList();
+
+    if (!freeDrivers.isEmpty()) {
+        UserDTO selectedDriver = freeDrivers.get(0);
+
+        // ✅ Affecter au véhicule
+        vehicle.setAssignedToDriverId(String.valueOf(selectedDriver.getId()));
+        vehicle.setDriverFirstName(selectedDriver.getFirstName());
+        vehicle.setDriverLastName(selectedDriver.getLastName());
+
+        Vehicle savedVehicle = vehicleRepository.save(vehicle);
+
+        // ✅ Informer User Microservice que le véhicule est assigné
+        Long userIdLong = Long.valueOf(selectedDriver.getId());
+        userClient.updateUserAssignedVehicle(userIdLong, savedVehicle.getIdV());
+        return savedVehicle;
+    }
+
+    return vehicleRepository.save(vehicle);
+}*/
 
     public Vehicle addVehicle(Vehicle vehicle) {
         if (vehicle.getVehicleStatusD() == null) {
             vehicle.setVehicleStatusD(Status.APPROVED);
         }
-        return vehicleRepository.save(vehicle);}
+
+        // ✅ Vérifier si le VIN existe déjà
+        Optional<Vehicle> existingVehicle = vehicleRepository.findByVin(vehicle.getVin());
+        if (existingVehicle.isPresent()) {
+            throw new RuntimeException("Le véhicule avec ce VIN existe déjà : " + vehicle.getVin());
+        }
+
+        // ✅ Obtenir liste des drivers libres
+        List<UserDTO> freeDrivers = userClient.getAllUsers().stream()
+                .filter(u -> u.getRoles() != null && u.getRoles().contains("driver"))
+                .filter(u -> u.getAssignedVehicleId() == null || u.getAssignedVehicleId().isEmpty())
+                .toList();
+
+        if (!freeDrivers.isEmpty()) {
+            UserDTO selectedDriver = freeDrivers.get(0);
+
+            // ✅ Affecter au véhicule
+            vehicle.setAssignedToDriverId(String.valueOf(selectedDriver.getId()));
+            vehicle.setDriverFirstName(selectedDriver.getFirstName());
+            vehicle.setDriverLastName(selectedDriver.getLastName());
+
+            Vehicle savedVehicle = vehicleRepository.save(vehicle);
+
+            // ✅ Informer User Microservice que le véhicule est assigné
+            Long userIdLong = Long.valueOf(selectedDriver.getId());
+            userClient.updateUserAssignedVehicle(userIdLong, savedVehicle.getIdV());
+            return savedVehicle;
+        }
+
+        return vehicleRepository.save(vehicle);
+    }
+
 
 
 

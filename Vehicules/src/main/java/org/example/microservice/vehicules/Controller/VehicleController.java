@@ -53,8 +53,6 @@ public class VehicleController {
     }
 
 
-
-
     @DeleteMapping("/remove-vehicle/{vehicle-id}")
     public void removeVehicle(@PathVariable("vehicle-id") String VId) {
         vehicleService.deleteVehicle(VId);

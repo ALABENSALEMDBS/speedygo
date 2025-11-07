@@ -5,6 +5,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Table(name = "users")
 @Data
@@ -39,5 +42,10 @@ public class User {
 
     @Column(nullable = false)
     private Boolean active = true;
+
+    @ElementCollection
+    private List<String> roles= new ArrayList<>();;
+    @Column(nullable = true)
+    private String assignedVehicleId;
 }
 

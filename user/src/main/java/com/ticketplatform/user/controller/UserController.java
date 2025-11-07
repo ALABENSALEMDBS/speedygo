@@ -47,6 +47,7 @@ public class UserController {
             user.setFirstName(request.getFirstName());
             user.setLastName(request.getLastName());
             user.setActive(true);
+            user.setRoles(List.of(request.getRole()));
             userService.createUser(user);
 
             return ResponseEntity.status(HttpStatus.CREATED)
@@ -65,8 +66,11 @@ public class UserController {
         String lastName = jwt.getClaimAsString("family_name");
         String email = jwt.getClaimAsString("email");
         String username = jwt.getClaimAsString("preferred_username");
+        List<String> roles = Optional.ofNullable(jwt.getClaimAsMap("realm_access"))
+                .map(m -> (List<String>) m.get("roles"))
+                .orElse(List.of());
 
-        User user = keycloakUserService.getOrCreateUser(userId, firstName, lastName, email, username);
+        User user = keycloakUserService.getOrCreateUser(userId, firstName, lastName, email, username, roles);
         return new ResponseEntity<>(user, HttpStatus.OK);
     }
 
@@ -119,5 +123,13 @@ public class UserController {
         }
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
+
+    @PutMapping("/{id}/assignVehicle/{vehicleId}")
+    public ResponseEntity<?> assignVehicleToUser(@PathVariable Long id, @PathVariable String vehicleId) {
+        return userService.updateAssignedVehicle(id, vehicleId)
+                ? ResponseEntity.ok("Vehicle assigned")
+                : ResponseEntity.status(HttpStatus.NOT_FOUND).body("User not found");
+    }
+
 }
 
