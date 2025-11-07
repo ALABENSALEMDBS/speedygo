@@ -19,8 +19,8 @@ public class KeycloakAdminService {
 
     private static final String SERVER_URL = "http://localhost:8060";
     private static final String REALM = "SpeedyGo5se4";
-    private static final String ADMIN_USERNAME = "admin";
-    private static final String ADMIN_PASSWORD = "admin";
+    private static final String ADMIN_USERNAME = "ranya";
+    private static final String ADMIN_PASSWORD = "ranya";
     private static final String CLIENT_ID = "admin-cli";
 
     private Keycloak getKeycloakInstance() {

@@ -30,6 +30,12 @@ public class ApiGatewayApplication {
                 .route("fastpost-delivery", r->r.path("/api/fastpost/**")
                         .uri("lb://fastpost-delivery") )
 
+                .route("delivery", r->r.path("/api/delivery/**")
+                        .uri("lb://fastpost-delivery") )
+
+                .route("delivery-fastpost", r->r.path("/api/delivery-fastpost/**")
+                        .uri("lb://fastpost-delivery") )
+
                 .route("ServiceProduit", r->r.path("/api/Produit/**")
                         .uri("lb://ServiceProduit") )
 

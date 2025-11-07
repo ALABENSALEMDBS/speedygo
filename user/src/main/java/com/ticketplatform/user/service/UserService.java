@@ -71,5 +71,16 @@ public class UserService {
         return true;
     }
 
+    public boolean updateDailyDeliveriesCount(Long id, int count) {
+        Optional<User> optionalUser = userRepository.findById(id);
+        if (optionalUser.isEmpty())
+            return false;
+
+        User user = optionalUser.get();
+        user.setDailyDeliveriesCount(count);
+        userRepository.save(user);
+        return true;
+    }
+
 }
 

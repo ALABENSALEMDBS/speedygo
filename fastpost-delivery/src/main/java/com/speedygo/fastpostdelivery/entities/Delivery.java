@@ -18,7 +18,22 @@ public class Delivery {
     @Enumerated(EnumType.STRING)
     private Status status;
 
-    private String receiverAddress;
+    // FastPost details (for driver to see delivery information)
+    private String receiverName;        // Nom du destinataire
+    private String receiverAddress;     // Adresse de livraison
+    private int receiverTelNbr;         // Numéro de téléphone du destinataire
+    private String packageWeight;       // Poids du colis
+    private Long fastPostId;            // ID du FastPost original
+
+    // Client information
+    private String userId; // ID of the client who created the FastPost
+    private String clientFirstName;
+    private String clientLastName;
+
+    // Driver information
+    private Long driverId; // ID of the driver assigned to this delivery
+    private String driverFirstName;
+    private String driverLastName;
 
     // Constructeurs
     public Delivery() {}
@@ -70,5 +85,85 @@ public class Delivery {
 
     public void setReceiverAddress(String receiverAddress) {
         this.receiverAddress = receiverAddress;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public String getClientFirstName() {
+        return clientFirstName;
+    }
+
+    public void setClientFirstName(String clientFirstName) {
+        this.clientFirstName = clientFirstName;
+    }
+
+    public String getClientLastName() {
+        return clientLastName;
+    }
+
+    public void setClientLastName(String clientLastName) {
+        this.clientLastName = clientLastName;
+    }
+
+    public Long getDriverId() {
+        return driverId;
+    }
+
+    public void setDriverId(Long driverId) {
+        this.driverId = driverId;
+    }
+
+    public String getDriverFirstName() {
+        return driverFirstName;
+    }
+
+    public void setDriverFirstName(String driverFirstName) {
+        this.driverFirstName = driverFirstName;
+    }
+
+    public String getDriverLastName() {
+        return driverLastName;
+    }
+
+    public void setDriverLastName(String driverLastName) {
+        this.driverLastName = driverLastName;
+    }
+
+    public String getReceiverName() {
+        return receiverName;
+    }
+
+    public void setReceiverName(String receiverName) {
+        this.receiverName = receiverName;
+    }
+
+    public int getReceiverTelNbr() {
+        return receiverTelNbr;
+    }
+
+    public void setReceiverTelNbr(int receiverTelNbr) {
+        this.receiverTelNbr = receiverTelNbr;
+    }
+
+    public String getPackageWeight() {
+        return packageWeight;
+    }
+
+    public void setPackageWeight(String packageWeight) {
+        this.packageWeight = packageWeight;
+    }
+
+    public Long getFastPostId() {
+        return fastPostId;
+    }
+
+    public void setFastPostId(Long fastPostId) {
+        this.fastPostId = fastPostId;
     }
 }

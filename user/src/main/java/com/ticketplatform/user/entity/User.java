@@ -47,5 +47,15 @@ public class User {
     private List<String> roles= new ArrayList<>();;
     @Column(nullable = true)
     private String assignedVehicleId;
+
+    // Driver availability fields for delivery assignment
+    @Column(nullable = false)
+    private boolean available = true;
+
+    @Column(nullable = false)
+    private int dailyDeliveriesCount = 0; // nombre de livraisons quotidiennes
+
+    @Column(nullable = true)
+    private String currentDeliveryAddress; // adresse des livraisons actuelles du chauffeur
 }
 
