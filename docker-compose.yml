@@ -1,0 +1,312 @@
+
+
+networks:
+  speedy_net:
+    name: speedy_net
+    driver: bridge
+
+volumes:
+  mysql_data:
+  mongo_data:
+
+services:
+
+  mysql:
+    image: mysql:8.0
+    container_name: mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./mysql/initdb:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-p${MYSQL_ROOT_PASSWORD}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    networks:
+      - speedy_net
+
+  mongo:
+    image: mongo:6.0
+    container_name: mongo
+    restart: unless-stopped
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_ROOT_USER}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_ROOT_PASS}
+      MONGO_INITDB_DATABASE: ${MONGO_DB}
+    ports:
+      - "${MONGO_PORT}:27017"
+    volumes:
+      - mongo_data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    networks:
+      - speedy_net
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.3.1
+    container_name: keycloak
+    restart: always
+    environment:
+      - KC_BOOTSTRAP_ADMIN_USERNAME=${KEYCLOAK_ADMIN}
+      - KC_BOOTSTRAP_ADMIN_PASSWORD=${KEYCLOAK_ADMIN_PASSWORD}
+      - KC_HOSTNAME_STRICT=false
+      - KC_HEALTH_ENABLED=true
+      - KC_HTTP_PORT=8060
+    command:
+      - start-dev
+      - --import-realm
+    volumes:
+      - ./keycloak/realm-export:/opt/keycloak/data/import:ro
+      - ./data/h2:/opt/keycloak/data/h2
+    ports:
+      - "${KEYCLOAK_HTTP_PORT}:8060"
+    healthcheck:
+      test: ["CMD-SHELL", "exec 3<>/dev/tcp/localhost/8060"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+      start_period: 60s
+    networks:
+      - speedy_net
+
+  eureka:
+    image: ranyamosrati/eurekaimg:1.0.0
+    container_name: eureka
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka:${EUREKA_PORT}/eureka
+    ports:
+      - "${EUREKA_PORT}:${EUREKA_PORT}"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:8761/actuator/health"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+    networks: 
+      - speedy_net
+
+  configserver:
+    image: ranyamosrati/confserverimg:1.0.0
+    container_name: configserver
+    environment:
+      SERVER_PORT: ${CONFIG_PORT}
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka:${EUREKA_PORT}/eureka
+    depends_on:
+      - eureka
+    ports:
+      - "${CONFIG_PORT}:${CONFIG_PORT}"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:8888/actuator/health"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+    networks: 
+      - speedy_net
+
+  # ========== H2 (FILE MODE) ==========
+  user-service:
+    image: ranyamosrati/userimg:1.0.0
+    container_name: user-service
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka:${EUREKA_PORT}/eureka
+      - SPRING_CONFIG_IMPORT=optional:configserver:http://configserver:${CONFIG_PORT}
+      - SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI=http://keycloak:8060/realms/${KEYCLOAK_REALM}
+      - SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK_SET_URI=http://keycloak:8060/realms/${KEYCLOAK_REALM}/protocol/openid-connect/certs
+      - KEYCLOAK_AUTH_SERVER_URL=http://keycloak:8060
+    volumes:
+      - ./h2/user:/data/h2
+    depends_on:
+      eureka:
+        condition: service_healthy
+      configserver:
+        condition: service_healthy
+    ports:
+      - "${USER_PORT}:${USER_PORT}"
+    networks:
+      - speedy_net
+
+  fastpost-delivery-service:
+    image: ranyamosrati/fastpostimg:1.0.0
+    container_name: fastpost-delivery
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka:${EUREKA_PORT}/eureka
+      - SPRING_CONFIG_IMPORT=optional:configserver:http://configserver:${CONFIG_PORT}
+      - SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI=http://keycloak:8060/realms/${KEYCLOAK_REALM}
+      - SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK_SET_URI=http://keycloak:8060/realms/${KEYCLOAK_REALM}/protocol/openid-connect/certs
+    volumes:
+      - ./h2/fastpost:/data/h2
+    depends_on:
+      eureka:
+        condition: service_healthy
+      configserver:
+        condition: service_healthy
+    ports:
+      - "${FASTPOST_PORT}:${FASTPOST_PORT}"
+    networks:
+      - speedy_net
+
+  covoiturage-service:
+    image: ranyamosrati/convoiturageimg:1.0.0
+    container_name: covoiturage-service
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka:${EUREKA_PORT}/eureka
+      - SPRING_CONFIG_IMPORT=optional:configserver:http://configserver:${CONFIG_PORT}
+      - SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI=http://keycloak:8060/realms/${KEYCLOAK_REALM}
+      - SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK_SET_URI=http://keycloak:8060/realms/${KEYCLOAK_REALM}/protocol/openid-connect/certs
+    volumes:
+      - ./h2/covoit:/data/h2
+    depends_on:
+      eureka:
+        condition: service_healthy
+      configserver:
+        condition: service_healthy
+    ports:
+      - "${COVOIT_PORT}:${COVOIT_PORT}"
+    networks:
+      - speedy_net
+
+  # ========== MySQL ==========
+  complaint-service:
+    image: ranyamosrati/complaintimg:1.0.0
+    container_name: complaint-service
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka:${EUREKA_PORT}/eureka
+      SPRING_CONFIG_IMPORT: optional:configserver:http://configserver:${CONFIG_PORT}
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/${DB_COMPLAINT_DB}?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Africa/Tunis&characterEncoding=utf8
+      SPRING_DATASOURCE_USERNAME: ${DB_USER}
+      SPRING_DATASOURCE_PASSWORD: ${DB_PASS}
+      SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI: http://keycloak:8060/realms/${KEYCLOAK_REALM}
+      SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK_SET_URI: http://keycloak:8060/realms/${KEYCLOAK_REALM}/protocol/openid-connect/certs
+    depends_on:
+      eureka:
+        condition: service_healthy
+      configserver:
+        condition: service_healthy
+      mysql:
+        condition: service_healthy
+    ports:
+      - "${COMPLAINT_PORT}:${COMPLAINT_PORT}"
+    networks:
+      - speedy_net
+
+  conge-service:
+    image: ranyamosrati/congeimg:1.0.0
+    container_name: conge-service
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka:${EUREKA_PORT}/eureka
+      SPRING_CONFIG_IMPORT: optional:configserver:http://configserver:${CONFIG_PORT}
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/${DB_CONGE_DB}?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Africa/Tunis&characterEncoding=utf8
+      SPRING_DATASOURCE_USERNAME: ${DB_USER}
+      SPRING_DATASOURCE_PASSWORD: ${DB_PASS}
+      SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI: http://keycloak:8060/realms/${KEYCLOAK_REALM}
+      SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK_SET_URI: http://keycloak:8060/realms/${KEYCLOAK_REALM}/protocol/openid-connect/certs
+    depends_on:
+      eureka:
+        condition: service_healthy
+      configserver:
+        condition: service_healthy
+      mysql:
+        condition: service_healthy
+    ports:
+      - "${CONGE_PORT}:${CONGE_PORT}"
+    networks:
+      - speedy_net
+
+  payment-service:
+    image: ranyamosrati/paimentimg:1.0.0
+    container_name: payment-service
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka:${EUREKA_PORT}/eureka
+      SPRING_CONFIG_IMPORT: optional:configserver:http://configserver:${CONFIG_PORT}
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/${DB_PAYMENT_DB}?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Africa/Tunis&characterEncoding=utf8
+      SPRING_DATASOURCE_USERNAME: ${DB_USER}
+      SPRING_DATASOURCE_PASSWORD: ${DB_PASS}
+      SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI: http://keycloak:8060/realms/${KEYCLOAK_REALM}
+      SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK_SET_URI: http://keycloak:8060/realms/${KEYCLOAK_REALM}/protocol/openid-connect/certs
+    depends_on:
+      eureka:
+        condition: service_healthy
+      configserver:
+        condition: service_healthy
+      mysql:
+        condition: service_healthy
+    ports:
+      - "${PAYMENT_PORT}:${PAYMENT_PORT}"
+    networks:
+      - speedy_net
+
+
+  vehicules-service:
+    image: ranyamosrati/vehiculeimg:1.0.0
+    container_name: vehicules-service
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka:${EUREKA_PORT}/eureka
+      SPRING_CONFIG_IMPORT: optional:configserver:http://configserver:${CONFIG_PORT}
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/${DB_VEHICULE_DB}?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Africa/Tunis&characterEncoding=utf8
+      SPRING_DATASOURCE_USERNAME: ${DB_USER}
+      SPRING_DATASOURCE_PASSWORD: ${DB_PASS}
+      SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI: http://keycloak:8060/realms/${KEYCLOAK_REALM}
+      SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK_SET_URI: http://keycloak:8060/realms/${KEYCLOAK_REALM}/protocol/openid-connect/certs
+    depends_on:
+      eureka:
+        condition: service_healthy
+      configserver:
+        condition: service_healthy
+      mysql:
+        condition: service_healthy
+    ports:
+      - "${VEHICULE_PORT}:${VEHICULE_PORT}"
+    networks:
+      - speedy_net
+
+  produitorder-service:
+      image: ranyamosrati/produitorderimg:1.0.0
+      container_name: dotnet-mongo-service
+      environment:
+        # Eureka / Config (si utilisés)
+        EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka:${EUREKA_PORT}/eureka
+
+        ConnectionStrings__MongoDb: mongodb://${MONGO_ROOT_USER}:${MONGO_ROOT_PASS}@mongo:27017/${MONGO_DB}?authSource=admin
+
+      depends_on:
+        eureka:
+          condition: service_healthy
+        configserver:
+          condition: service_healthy
+        mongo:
+          condition: service_healthy
+      ports:
+        - "${PRODUITORDER_PORT}:5001"
+      networks:
+      - speedy_net
+
+
+  api-gateway:
+    image: ranyamosrati/apigatewayimg:1.0.0
+    container_name: api-gateway
+    environment:
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eureka:${EUREKA_PORT}/eureka
+      SPRING_CONFIG_IMPORT: optional:configserver:http://configserver:${CONFIG_PORT}
+      SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URI: http://keycloak:8060/realms/${KEYCLOAK_REALM}
+      SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_JWK_SET_URI: http://keycloak:8060/realms/${KEYCLOAK_REALM}/protocol/openid-connect/certs
+    depends_on:
+      eureka:
+        condition: service_healthy
+      configserver:
+        condition: service_healthy
+      keycloak:
+        condition: service_healthy
+    ports:
+      - "${GATEWAY_PORT}:${GATEWAY_PORT}"
+    networks:
+      - speedy_net

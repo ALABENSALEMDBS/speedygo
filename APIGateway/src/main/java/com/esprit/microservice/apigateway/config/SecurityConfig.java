@@ -28,7 +28,7 @@ public class SecurityConfig {
                         .pathMatchers("/api/users/register").permitAll()
                         .pathMatchers("/api/auth/**").permitAll()
                         .pathMatchers("/swagger-ui/**", "/v3/api-docs/**", "/swagger-ui.html", "/webjars/**").permitAll()
-                        .pathMatchers("/api/users/**").hasAnyRole("admin")
+                        .pathMatchers("/api/users/**").hasAnyRole("admin", "client", "driver")
                         .pathMatchers("/Vehicules/api/vehicle/**").hasAnyRole("admin", "driver")
                         .pathMatchers("/conge/**").hasAnyRole("admin", "driver")
                         .pathMatchers("/api/fastpost/**").hasAnyRole("admin", "driver", "client")

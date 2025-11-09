@@ -8,6 +8,7 @@ import org.keycloak.admin.client.resource.UsersResource;
 import org.keycloak.representations.idm.CredentialRepresentation;
 import org.keycloak.representations.idm.RoleRepresentation;
 import org.keycloak.representations.idm.UserRepresentation;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import jakarta.ws.rs.core.Response;
@@ -17,15 +18,17 @@ import java.util.List;
 @Service
 public class KeycloakAdminService {
 
-    private static final String SERVER_URL = "http://localhost:8060";
+    @Value("${keycloak.auth-server-url:http://keycloak:8060}")
+    private String serverUrl;
+
     private static final String REALM = "SpeedyGo5se4";
-    private static final String ADMIN_USERNAME = "ranya";
-    private static final String ADMIN_PASSWORD = "ranya";
+    private static final String ADMIN_USERNAME = "admin";
+    private static final String ADMIN_PASSWORD = "admin";
     private static final String CLIENT_ID = "admin-cli";
 
     private Keycloak getKeycloakInstance() {
         return KeycloakBuilder.builder()
-                .serverUrl(SERVER_URL)
+                .serverUrl(serverUrl)
                 .realm("master") // L'admin se connecte au realm master
                 .clientId(CLIENT_ID)
                 .username(ADMIN_USERNAME)
