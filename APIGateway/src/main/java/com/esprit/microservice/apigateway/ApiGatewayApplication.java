@@ -30,9 +30,10 @@ public class ApiGatewayApplication {
                 .route("fastpost-delivery", r->r.path("/api/fastpost/**")
                         .uri("lb://fastpost-delivery") )
 
-                .route("ServiceProduit", r->r.path("/api/Produit/**")
+                .route("ServiceProduit", r->r.path("/api/Product/**")
                         .uri("lb://ServiceProduit") )
-
+                .route("routeOrder", r -> r.path("/api/Order/**")
+                        .uri("lb://ServiceProduit"))
                 .route("conge", r->r.path("/conge/leaveSettings/**")
                         .uri("lb://conge") )
 
