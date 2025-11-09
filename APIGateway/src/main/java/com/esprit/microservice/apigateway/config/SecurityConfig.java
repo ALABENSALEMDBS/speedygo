@@ -32,6 +32,8 @@ public class SecurityConfig {
                         .pathMatchers("/Vehicules/api/vehicle/**").hasAnyRole("admin", "driver")
                         .pathMatchers("/conge/**").hasAnyRole("admin", "driver")
                         .pathMatchers("/api/fastpost/**").hasAnyRole("admin", "driver", "client")
+                        .pathMatchers("/api/delivery-fastpost/**").hasAnyRole("admin", "driver", "client")
+                        .pathMatchers("/api/delivery/**").hasAnyRole("admin", "driver", "client")
                         .pathMatchers("/complaint/**").hasAnyRole("admin", "driver", "client")
                         .pathMatchers("/api/carpooling/**").hasAnyRole("admin", "driver", "client")
                         .pathMatchers("/paiment/**").hasAnyRole("admin", "driver", "client")
