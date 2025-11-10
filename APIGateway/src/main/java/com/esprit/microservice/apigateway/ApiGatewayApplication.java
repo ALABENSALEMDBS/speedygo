@@ -39,7 +39,7 @@ public class ApiGatewayApplication {
                 .route("ServiceProduit", r->r.path("/api/Produit/**")
                         .uri("lb://ServiceProduit") )
 
-                .route("conge", r->r.path("/conge/leaveSettings/**")
+                .route("conge", r->r.path("/conge/leaves/**")
                         .uri("lb://conge") )
 
                 .route("paiment", r->r.path("/paiment/ads/**")

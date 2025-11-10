@@ -1,9 +1,7 @@
 package org.example.conge.entities;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
@@ -17,11 +15,25 @@ import lombok.*;
 
 public class LeaveSettings {
     @Id
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private int maxAllowedDays;
+
+    // Getters
+    public Long getId() {
+        return id;
+    }
+
+    public int getMaxAllowedDays() {
+        return maxAllowedDays;
+    }
+
+    // Setters
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public void setMaxAllowedDays(int maxAllowedDays) {
         this.maxAllowedDays = maxAllowedDays;
     }
-
 }

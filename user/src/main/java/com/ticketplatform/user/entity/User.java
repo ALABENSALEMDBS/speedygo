@@ -49,8 +49,8 @@ public class User {
     private String assignedVehicleId;
 
     // Driver availability fields for delivery assignment
-    @Column(nullable = false)
-    private boolean available = true;
+//    @Column(nullable = false)
+//    private boolean available = true;
 
     @Column(nullable = false)
     private int dailyDeliveriesCount = 0; // nombre de livraisons quotidiennes

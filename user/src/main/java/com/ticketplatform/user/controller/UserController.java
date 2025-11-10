@@ -31,6 +31,12 @@ public class UserController {
     // Register new user with role selection
     @PostMapping("/register")
     public ResponseEntity<?> register(@RequestBody RegisterRequest request) {
+        System.out.println("📝 Registration request received:");
+        System.out.println("   Email: " + request.getEmail());
+        System.out.println("   Password received: " + (request.getPassword() != null ? "YES (length=" + request.getPassword().length() + ")" : "NO"));
+        System.out.println("   Name: " + request.getFirstName() + " " + request.getLastName());
+        System.out.println("   Role: " + request.getRole());
+
         try {
             // Create user in Keycloak with selected role
             String keycloakUserId = keycloakAdminService.createUserWithRole(

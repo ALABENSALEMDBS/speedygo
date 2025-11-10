@@ -19,8 +19,8 @@ public class KeycloakAdminService {
 
     private static final String SERVER_URL = "http://localhost:8060";
     private static final String REALM = "SpeedyGo5se4";
-    private static final String ADMIN_USERNAME = "ranya";
-    private static final String ADMIN_PASSWORD = "ranya";
+    private static final String ADMIN_USERNAME = "oumayma";
+    private static final String ADMIN_PASSWORD = "oumayma";
     private static final String CLIENT_ID = "admin-cli";
 
     private Keycloak getKeycloakInstance() {
@@ -35,6 +35,12 @@ public class KeycloakAdminService {
     }
 
     public String createUserWithRole(String email, String password, String firstName, String lastName, String role) {
+        System.out.println("👤 Creating user in Keycloak:");
+        System.out.println("   Email: " + email);
+        System.out.println("   Name: " + firstName + " " + lastName);
+        System.out.println("   Role: " + role);
+        System.out.println("   Password length: " + (password != null ? password.length() : 0));
+
         Keycloak keycloak = getKeycloakInstance();
         RealmResource realmResource = keycloak.realm(REALM);
         UsersResource usersResource = realmResource.users();
@@ -50,22 +56,26 @@ public class KeycloakAdminService {
 
         // Create user in Keycloak
         Response response = usersResource.create(user);
-        
+
         if (response.getStatus() != 201) {
+            System.err.println("❌ Failed to create user: " + response.getStatusInfo());
             throw new RuntimeException("Failed to create user in Keycloak: " + response.getStatusInfo());
         }
 
         // Get user ID from location header
         String locationHeader = response.getHeaderString("Location");
         String userId = locationHeader.substring(locationHeader.lastIndexOf('/') + 1);
+        System.out.println("✅ User created with ID: " + userId);
 
         // Set password
+        System.out.println("🔑 Setting password for user...");
         UserResource userResource = usersResource.get(userId);
         CredentialRepresentation credential = new CredentialRepresentation();
         credential.setType(CredentialRepresentation.PASSWORD);
         credential.setValue(password);
         credential.setTemporary(false);
         userResource.resetPassword(credential);
+        System.out.println("✅ Password set successfully (temporary=false)");
 
         // Assign role (client, driver, or admin allowed)
         if (role.equals("client") || role.equals("driver") || role.equals("admin")) {
