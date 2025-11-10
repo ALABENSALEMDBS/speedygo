@@ -37,7 +37,8 @@ public class SecurityConfig {
                         .pathMatchers("/complaint/**").hasAnyRole("admin", "driver", "client")
                         .pathMatchers("/api/carpooling/**").hasAnyRole("admin", "driver", "client")
                         .pathMatchers("/paiment/**").hasAnyRole("admin", "driver", "client")
-                        .pathMatchers("/api/Produit/**").hasAnyRole("admin", "driver", "client")
+                        .pathMatchers("/api/Product/**").hasAnyRole("admin", "driver", "client")
+                        .pathMatchers("/api/Order/**").hasAnyRole("admin", "driver", "client")
                         .anyExchange().authenticated()
                 )
                 .oauth2ResourceServer(oauth2 -> oauth2
